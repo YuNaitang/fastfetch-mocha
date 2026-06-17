@@ -1,0 +1,237 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+    // ========================= Left Logo =========================
+    "logo": {
+        "source": "logo",                          // Same directory, or use absolute path
+        "color": { "1": "#cba6f7" },               // Catppuccin Mocha mauve
+        "padding": { "top": 2, "right": 2 }
+    },
+
+    // ========================= Display =========================
+    "display": {
+        "separator": "",
+        "color": {                                  // Color reference (module colors via keyColor)
+            "title": "#cba6f7",
+            "os": "#89dceb",
+            "kernel": "#89b4fa",
+            "uptime": "#f9e2af",
+            "packages": "#a6e3a1",
+            "shell": "#94e2d5",
+            "terminal": "#a6e3a1",
+            "de": "#f5c2e7",
+            "theme": "#f5c2e7",
+            "icons": "#f5c2e7",
+            "font": "#f2cdcd",
+            "cpu": "#fab387",
+            "gpu": "#f9e2af",
+            "memory": "#fab387",
+            "disk": "#fab387",
+            "local_ip": "#bac2de",
+            "display_time": "#89b4fa"
+        },
+        "percent": {
+            "type": ["bar", "num"],
+            "ndigits": 1,
+            "color": { "green": 30, "yellow": 70 }
+        },
+        "bar": {
+            "width": 15,
+            "char": {
+                "elapsed": "-",
+                "total": "·"
+            }
+        }
+    },
+
+    // ========================= Modules =========================
+    "modules": [
+        // ----- Core System -----
+        {
+            "type": "title",
+            "key": "\uf88c  System  \uf051 ",
+            "format": "",
+            "keyColor": "#cba6f7",
+            "outputColor": "#cdd6f4"
+        },
+        {
+            "type": "title",
+            "key": "\uf007  User \uf051 ",
+            "format": "{user-name}",
+            "keyColor": "#cba6f7",
+            "outputColor": "#cdd6f4"
+        },
+        "separator",
+
+        {
+            "type": "title",
+            "key": "\uf88c  Core System  \uf051\uf051",
+            "format": "\uf051",
+            "keyColor": "#cba6f7",
+            "outputColor": "#cdd6f4"
+        },
+        {
+            "type": "os",
+            "key": "\uf88c  OS \uf051 ",
+            "keyColor": "#89dceb",
+            "outputColor": "#cdd6f4"
+        },
+        {
+            "type": "host",
+            "key": "\uf236  Host \uf051 ",
+            "keyColor": "#89dceb",
+            "outputColor": "#cdd6f4"
+        },
+        {
+            "type": "kernel",
+            "key": "\uf013  Kernel \uf051 ",
+            "keyColor": "#89b4fa",
+            "outputColor": "#cdd6f4"
+        },
+        {
+            "type": "uptime",
+            "key": "\uf017  Uptime \uf051 ",
+            "keyColor": "#f9e2af",
+            "outputColor": "#cdd6f4"
+        },
+        "separator",
+
+        // ----- Software -----
+        {
+            "type": "title",
+            "key": "\uf05d7  Software  \uf051\uf051",
+            "format": "\uf051",
+            "keyColor": "#cba6f7",
+            "outputColor": "#cdd6f4"
+        },
+        {
+            "type": "packages",
+            "key": "\uf05d7  Packages \uf051 ",
+            "keyColor": "#a6e3a1",
+            "outputColor": "#cdd6f4"
+        },
+        {
+            "type": "shell",
+            "key": "\uf149  Shell \uf051 ",
+            "keyColor": "#94e2d5",
+            "outputColor": "#cdd6f4"
+        },
+        {
+            "type": "terminal",
+            "key": "\ue79e  Terminal \uf051 ",
+            "keyColor": "#a6e3a1",
+            "outputColor": "#cdd6f4"
+        },
+        "separator",
+
+        // ----- Hardware -----
+        {
+            "type": "title",
+            "key": "\uf05d3  Hardware  \uf051\uf051",
+            "format": "\uf051",
+            "keyColor": "#cba6f7",
+            "outputColor": "#cdd6f4"
+        },
+        {
+            "type": "cpu",
+            "key": "\uf05d3  CPU \uf051 ",
+            "keyColor": "#fab387",
+            "outputColor": "#cdd6f4",
+            "temp": true
+        },
+        {
+            "type": "gpu",
+            "key": "\uf07a  GPU \uf051 ",
+            "keyColor": "#f9e2af",
+            "outputColor": "#cdd6f4"
+        },
+        {
+            "type": "memory",
+            "key": "\uf0ed  Memory \uf051 ",
+            "keyColor": "#fab387",
+            "outputColor": "#cdd6f4"
+        },
+        {
+            "type": "disk",
+            "key": "\uf0cb  Disk ({name}){mountpoint-link} \uf051 ",
+            "keyColor": "#fab387",
+            "outputColor": "#cdd6f4"
+        },
+        "separator",
+
+        // ----- Desktop Environment -----
+        {
+            "type": "title",
+            "key": "\uf88c  Desktop Env  \uf051\uf051",
+            "format": "\uf051",
+            "keyColor": "#cba6f7",
+            "outputColor": "#cdd6f4"
+        },
+        {
+            "type": "de",
+            "key": "\uf0e8  DE \uf051 ",
+            "keyColor": "#f5c2e7",
+            "outputColor": "#cdd6f4"
+        },
+        {
+            "type": "wm",
+            "key": "\uf02a  WM \uf051 ",
+            "keyColor": "#b4befe",
+            "outputColor": "#cdd6f4"
+        },
+        {
+            "type": "theme",
+            "key": "\uf00c  Theme \uf051 ",
+            "keyColor": "#f5c2e7",
+            "outputColor": "#cdd6f4"
+        },
+        {
+            "type": "icons",
+            "key": "\uf081  Icons \uf051 ",
+            "keyColor": "#f5c2e7",
+            "outputColor": "#cdd6f4"
+        },
+        {
+            "type": "font",
+            "key": "\uf05e5  Font \uf051 ",
+            "keyColor": "#f2cdcd",
+            "outputColor": "#cdd6f4"
+        },
+        "separator",
+
+        // ----- Network & Time -----
+        {
+            "type": "title",
+            "key": "\uf080  Network \uf051\uf051",
+            "format": "\uf051",
+            "keyColor": "#bac2de",
+            "outputColor": "#cdd6f4"
+        },
+        {
+            "type": "localip",
+            "key": "\uf080  LAN \uf051 ",
+            "keyColor": "#bac2de",
+            "defaultRouteOnly": false,
+            "showLoop": false,
+            "format": "{ifname}: {ipv4}",
+            "outputColor": "#cdd6f4"
+        },
+        {
+            "type": "datetime",
+            "key": "\uf0e0  Time \uf051 ",
+            "keyColor": "#89b4fa",
+            "format": "{year}-{month-pretty}-{day-pretty} {hour-pretty}:{minute-pretty}:{second-pretty}",
+            "outputColor": "#cdd6f4"
+        },
+        "separator",
+
+        // ----- Custom Quote -----
+        {
+            "type": "command",
+            "key": "\uf0df  Quote \uf051 ",
+            "text": "curl.exe -s --max-time 3 -o %TEMP%\\hk_new.txt https://v1.hitokoto.cn/?encode=text & if exist %TEMP%\\hk_new.txt (type %TEMP%\\hk_new.txt & move /y %TEMP%\\hk_new.txt %USERPROFILE%\\.cache\\fastfetch_quote.txt >nul) else (type %USERPROFILE%\\.cache\\fastfetch_quote.txt 2>nul || echo Quiting...)",
+            "keyColor": "#cba6f7",
+            "outputColor": "#cdd6f4"
+        }
+    ]
+}
