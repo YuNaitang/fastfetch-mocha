@@ -38,8 +38,8 @@
         "bar": {
             "width": 15,
             "char": {
-                "elapsed": "-",
-                "total": "·"
+                "elapsed": "\u25a0",
+                "total": "\u00b7"
             }
         }
     },
