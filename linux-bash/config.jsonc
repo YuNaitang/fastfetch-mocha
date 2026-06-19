@@ -1,0 +1,255 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+    // ========================= 左侧 Logo 配置 =========================
+    "logo": {
+        "source": "~/.config/fastfetch/logo",      // 你的 logo 文件路径
+        "color": { "1": "#cba6f7" },               // Catppuccin Mocha mauve
+        "padding": { "top": 2, "right": 2 }        // 与右侧信息的间距
+    },
+
+    // ========================= 全局显示样式 =========================
+    "display": {
+        "separator": "",                            // 模块间分隔符
+        "color": {                                  // 全局颜色预设
+            "title": "#cba6f7",
+            "os": "#89dceb",
+            "kernel": "#89b4fa",
+            "uptime": "#f9e2af",
+            "packages": "#a6e3a1",
+            "shell": "#94e2d5",
+            "terminal": "#a6e3a1",
+            "de": "#f5c2e7",
+            "theme": "#f5c2e7",
+            "icons": "#f5c2e7",
+            "font": "#f2cdcd",
+            "cpu": "#fab387",
+            "gpu": "#f9e2af",
+            "memory": "#fab387",
+            "disk": "#fab387",
+            "local_ip": "#bac2de",
+            "display_time": "#89b4fa"
+        },
+        // 进度条样式 —— 动效核心
+        "percent": {
+            "type": ["bar", "num"],
+            "ndigits": 1,
+            "color": { "green": 30, "yellow": 70 }
+        },
+        "bar": {
+            "width": 15,
+            "fillChar": "-",
+            "emptyChar": "·"
+        }
+    },
+
+    // ========================= 右侧信息模块 =========================
+    "modules": [
+        // ----- 核心系统 -----
+        {
+            "type": "title",
+            "key": "󰌢  System   ",
+            "format": "",
+            "keyColor": "#cba6f7",
+            "valueColor": "#cdd6f4"
+        },
+        {
+            "type": "title",
+            "key": "  User  ",
+            "format": "{user-name}",
+            "keyColor": "#cba6f7",
+            "valueColor": "#cdd6f4"
+        },
+        "separator",
+
+        {
+            "type": "title",
+            "key": "󰌢  Core System  ",
+            "format": "",
+            "keyColor": "#cba6f7",
+            "valueColor": "#cdd6f4"
+        },
+        {
+            "type": "os",
+            "key": "󰌢  OS  ",
+            "keyColor": "#89dceb",
+            "valueColor": "#cdd6f4"
+        },
+        {
+            "type": "host",
+            "key": "  Host  ",
+            "keyColor": "#89dceb",
+            "valueColor": "#cdd6f4"
+        },
+        {
+            "type": "kernel",
+            "key": "  Kernel  ",
+            "keyColor": "#89b4fa",
+            "valueColor": "#cdd6f4"
+        },
+        {
+            "type": "uptime",
+            "key": "  Uptime  ",
+            "keyColor": "#f9e2af",
+            "valueColor": "#cdd6f4"
+        },
+        "separator",
+
+        // ----- 软件环境 -----
+        {
+            "type": "title",
+            "key": "󰏗  Software  ",
+            "format": "",
+            "keyColor": "#cba6f7",
+            "valueColor": "#cdd6f4"
+        },
+        {
+            "type": "packages",
+            "key": "󰏗  Packages  ",
+            "keyColor": "#a6e3a1",
+            "valueColor": "#cdd6f4"
+        },
+        {
+            "type": "shell",
+            "key": "  Shell  ",
+            "keyColor": "#94e2d5",
+            "valueColor": "#cdd6f4"
+        },
+        {
+            "type": "terminal",
+            "key": "  Terminal  ",
+            "keyColor": "#a6e3a1",
+            "valueColor": "#cdd6f4"
+        },
+        "separator",
+
+        // ----- 硬件信息 (带进度条) -----
+        {
+            "type": "title",
+            "key": "󰍛  Hardware  ",
+            "format": "",
+            "keyColor": "#cba6f7",
+            "valueColor": "#cdd6f4"
+        },
+        {
+            "type": "cpu",
+            "key": "󰍛  CPU  ",
+            "keyColor": "#fab387",
+            "valueColor": "#cdd6f4",
+            "showTemperature": true
+        },
+        {
+            "type": "gpu",
+            "key": "󰺵  GPU  ",
+            "keyColor": "#f9e2af",
+            "valueColor": "#cdd6f4"
+        },
+        {
+            "type": "memory",
+            "key": "󰑭  Memory  ",
+            "keyColor": "#fab387",
+            "valueColor": "#cdd6f4"
+        },
+        {
+            "type": "disk",
+            "key": "󰋊  Disk ({name}:/)  ",
+            "mount": "/",
+            "keyColor": "#fab387",
+            "valueColor": "#cdd6f4"
+        },
+        "separator",
+
+        // ----- 桌面环境（若使用 GUI）-----
+        {
+            "type": "title",
+            "key": "󰌢  Desktop Env  ",
+            "format": "",
+            "keyColor": "#cba6f7",
+            "valueColor": "#cdd6f4"
+        },
+        {
+            "type": "de",
+            "key": "󰧨  DE  ",
+            "keyColor": "#f5c2e7",
+            "valueColor": "#cdd6f4"
+        },
+        {
+            "type": "wm",
+            "key": "󰨊  WM  ",
+            "keyColor": "#b4befe",
+            "valueColor": "#cdd6f4"
+        },
+        {
+            "type": "theme",
+            "key": "󰌌  Theme  ",
+            "keyColor": "#f5c2e7",
+            "valueColor": "#cdd6f4"
+        },
+        {
+            "type": "icons",
+            "key": "󰀁  Icons  ",
+            "keyColor": "#f5c2e7",
+            "valueColor": "#cdd6f4"
+        },
+        {
+            "type": "font",
+            "key": "󰝥  Font  ",
+            "keyColor": "#f2cdcd",
+            "valueColor": "#cdd6f4"
+        },
+        "separator",
+
+        // ----- 网络与时间 -----
+        {
+            "type": "title",
+            "key": "󰈀  Network ",
+            "format": "",
+            "keyColor": "#bac2de",
+            "valueColor": "#cdd6f4"
+        },
+        {
+           "type": "command",
+            "alwaysShow": true,
+            "key": "󰈀  Main NIC  ",
+            "text": "ip -4 addr show dev eno1 scope global 2>/dev/null | grep -oP '(?<=inet\\s)[\\d.]+' | head -1 | xargs -I {} echo 'eno1 {}' || echo 'eno1 N/A'",
+            "keyColor": "#bac2de",
+            "valueColor": "#cdd6f4"
+        },
+// 按需添加网络配置
+/* 
+*        {
+*            "type": "command",
+*            "alwaysShow": true,
+*            "key": "󰈀  docker  ",
+*            "text": "ip -4 addr show dev docker0 scope global 2>/dev/null | grep -oP '(?<=inet\\s)[\\d.]+' | head -1 | xargs -I {} echo 'docker0 {}' || echo 'docker0 N/A'",
+*            "keyColor": "#bac2de",
+*            "valueColor": "#cdd6f4"
+*        },
+*        {
+*            "type": "command",
+*            "alwaysShow": true,
+*            "key": "󰈀  Mihomo  ",
+*            "text": "ip -4 addr show dev Mihomo scope global 2>/dev/null | grep -oP '(?<=inet\\s)[\\d.]+' | head -1 | xargs -I {} echo 'Mihomo {}' || echo 'Mihomo N/A'",
+*            "keyColor": "#bac2de",
+*            "valueColor": "#cdd6f4"
+*        },
+*/
+        {
+            "type": "command",
+            "key": "󰸗  Time  ",
+            "text": "echo $(date +'%Y-%m-%d %H:%M:%S')",
+            "keyColor": "#89b4fa",
+            "valueColor": "#cdd6f4"
+        },
+        "separator",
+
+        // ----- 自定义标语 -----
+        {
+            "type": "command",
+            "key": "󰖟  Quote  ",
+            "text": "cat ~/.cache/fastfetch_quote.txt 2>/dev/null || echo 'Loading...' ; (curl -s --max-time 1 https://v1.hitokoto.cn/ | grep -oP '(?<=\"hitokoto\":\")[^\"]*' > ~/.cache/fastfetch_quote.txt.tmp && mv ~/.cache/fastfetch_quote.txt.tmp ~/.cache/fastfetch_quote.txt) &>/dev/null &",
+            "keyColor": "#cba6f7",
+            "valueColor": "#cdd6f4"
+        }
+    ]
+}

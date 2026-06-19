@@ -1,0 +1,21 @@
+# --- OS files ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+
+# --- Editor / IDE ---
+.vscode/settings.json
+.vscode/workspace.json
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+
+# --- fastfetch temp / cache ---
+# (uncomment if needed)
+# fastfetch --gen-config output
+# generated-config.jsonc
